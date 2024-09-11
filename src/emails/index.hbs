@@ -27,6 +27,7 @@
 
       p {
         color: #2b2b2b;
+        line-height: 1.6;
       }
 
       div {
@@ -35,6 +36,12 @@
 
       div > div {
         padding: .5rem;
+      }
+
+      @media screen and (max-width: 640px) {
+        br {
+          display: none;
+        }
       }
     </style>
   </head>
@@ -45,7 +52,7 @@
           <strong>Hi there. 🙂 </strong>This is a collection of emails created for KidStart.
         </p>
         <p>
-          They were built using the system I created for KidStart for this purpose.
+          They were created using the <strong><a href="https://github.com/james-barrett-dev/ks-email-builder">build system</a></strong> I developed for KidStart for this purpose.
         </p>
         <p>
           <strong>I recommend viewing 'All components' first.</strong>
@@ -57,7 +64,8 @@
           All emails are derived from this core set of components.
         </p>
         <p>
-          Then maybe install and play with the build system I developed to render these emails.
+          🚨 If you are reviewing the code of these rendered emails, </br>please note that the CSS/HTML has been run through a minifier, and won't be pretty.</br>
+          Review the original <a href="https://github.com/james-barrett-dev/ks-email-builder/tree/master/src/emails">source templates</a> in the <a href="https://github.com/james-barrett-dev/ks-email-builder">build system</a>
         </p>
       </div>
       <div>
