@@ -114,8 +114,8 @@ function pruneUnusedCss() {
 // Inline CSS
 function inlineCss() {
   return gulp.src('./dist/**/*.html')
-    .pipe(replace(/<link href=".\/css\/main.css"[^>]*>/, function() {
-      var style = fs.readFileSync('./dist/css/main.css', 'utf8');
+    .pipe(replace(/<link href=".\/main.css"[^>]*>/, function() {
+      var style = fs.readFileSync('./dist/main.css', 'utf8');
       return '<style type="text/css">\n' + style + '\n</style>';
     }))
     .pipe(cssInliner({
