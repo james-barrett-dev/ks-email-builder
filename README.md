@@ -1,4 +1,4 @@
-# Email Builder Project
+# KS Email Builder
 
 This project is designed to help the KidStart marketing department build responsive email templates using SCSS for styling and Handlebars for templating. The build process includes CSS inlining, media query grouping, HTML minification, and removal of unused CSS.
 
