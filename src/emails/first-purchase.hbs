@@ -1,0 +1,139 @@
+{{#> default-layout subject='First purchase'}}
+  {{#> email-container width='640'}}
+    {{#> block-content-container props='padded background mandys-pink'}}
+      {{> navigation props='fontFamily bariol colour white' 
+        logo='white'
+        logoUrl='#'
+        navUrlOne='#'
+        navTextOne='TUI Holiday Hub'
+        navUrlTwo='#'
+        navUrlTwo='My Home'
+        navUrlThree='#'
+        navTextThree='Refer & Earn'
+      }}
+    {{/block-content-container}}
+
+    {{#> block-content-container props='padded background mandys-pink'}}
+      {{#> block-content-container props='spacing bottomForty bottomThirtyTwoMobile'}}
+        {{> image 
+            type='responsive'
+            src='../src/images/emails/first-purchase-hero_592x296.jpg'
+            width='592'
+            alt='Photo of a happy child with a toy bear'
+            url='#'
+        }}
+      {{/block-content-container}}
+      {{#> block-content-container props='spacing bottomFortyEight bottomFortyMobile' align='left'}}
+        <p class="margin bottomSixteen fontFamily bariol fontSize title subheaderMobile colour white">
+          <strong class="fontFamily bariol fontSize title subheaderMobile colour white">Hi James,</strong><br>
+        </p>
+        <p class="margin bottomSixteen fontFamily bariol fontSize title subheaderMobile colour white">
+          <strong class="fontFamily bariol fontSize title subheaderMobile colour white">Congratulations on making your first saving for child's name with KidStart!</strong><br>
+        </p>
+        <p class="fontFamily bariol fontSize title subheaderMobile colour white">
+          We couldn't be happier to be helping you give your child a brighter future. Take a look at how much you've saved - no matter how small, it all adds up.
+        </p>
+      {{/block-content-container}}
+
+      {{#> block-content-container props='spacing bottomForty bottomThirtyTwoMobile' align='center'}}
+        {{> button type='thunderbird' props='fontFamily bariol fontSize subheader colour white' align='center' title='View kiddybank balance' url='#'}}
+      {{/block-content-container}}
+
+      {{#> block-content-container props='spacing bottomForty bottomThirtyTwoMobile' align='left'}}
+        <p class="fontFamily bariol fontSize title subheaderMobile colour white">
+          Happy saving<br>
+          <strong class="fontFamily bariol fontSize title subheaderMobile colour white">KidStart HQ x</strong>
+        </p>
+      {{/block-content-container}}
+    {{/block-content-container}}
+
+    {{#> block-content-container props='padded background white spacing topFortyEight topFortyMobile' align='center'}}
+      <h2 class="fontFamily arial fontSize headline titleMobile colour accent-4">
+        <span class="fontFamily barlow fontSize headline titleMobile">
+          Now you've started here's three ways <br>to boost your savings
+        </span>
+      </h2>
+    {{/block-content-container}}
+
+    {{#> block-content-container props='spacing topTwentyFour bottomThirtyTwo bottomFortyMobile padded background white'}}
+      {{#> columns-container}} 
+        {{#> column width='180'}}
+          {{#> block-content-container props='background' align='left' }}
+            {{#> block-content-container props='spacing bottomTwentyFour'}}
+              {{> image 
+                  type='responsive'
+                  src='../src/images/emails/save-together-icon.png'
+                  width='180'
+                  alt='Save together'
+                  url='#'
+              }}
+            {{/block-content-container}}
+            {{#> block-content-container align='left'}}
+              {{#> inline-content-container props='fullWidthOnMobile spacing bottomTwentyFour' align='center' width='180'}}
+                <h3 class="margin bottomEight fontFamily barlow fontSize title subheaderMobile colour abbey">
+                  Save together
+                </h3>
+                <p class="fontFamily bariol fontSize body subheaderMobile colour abbey">
+                  Invite family to join and save too - grandparents love to help out.
+                </p>
+              {{/inline-content-container}}
+            {{/block-content-container}}
+          {{/block-content-container}}
+        {{/column}}
+
+        {{#> column width='184' }}
+          {{#> block-content-container props='background' align='center'}}
+            {{#> block-content-container props='spacing bottomTwentyFour'}}
+              {{> image 
+                  type='responsive'
+                  src='../src/images/emails/grow-your-savings-icon.png'
+                  width='184'
+                  alt='Grow your Savings'
+                  url='#'
+              }}
+            {{/block-content-container}}
+            {{#> block-content-container align='center'}}
+              {{#> inline-content-container props='fullWidthOnMobile spacing bottomTwentyFour' align='center' width='180'}}
+                <h3 class="margin bottomEight fontFamily barlow fontSize title subheaderMobile colour abbey">
+                  Grow your Savings
+                </h3>
+                <p class="fontFamily bariol fontSize body subheaderMobile colour abbey">
+                  Download the Beanstalk app to grow your child’s savings
+                </p>
+              {{/inline-content-container}}
+            {{/block-content-container}}
+          {{/block-content-container}}
+        {{/column}}
+
+        {{#> column width='180' }}
+          {{#> block-content-container props='background' align='right'}}
+            {{#> block-content-container props='spacing bottomTwentyFour'}}
+              {{> image 
+                  type='responsive'
+                  src='../src/images/emails/share-the-love-icon.png'
+                  width='180'
+                  alt='Share the love'
+                  url='#'
+              }}
+            {{/block-content-container}}
+            {{#> block-content-container align='right'}}
+              {{#> inline-content-container props='fullWidthOnMobile spacing bottomTwentyFour' align='center' width='180'}}
+                <h3 class="margin bottomEight fontFamily barlow fontSize title subheaderMobile colour abbey">
+                  Share the love
+                </h3>
+                <p class="fontFamily bariol fontSize body subheaderMobile colour abbey">
+                  Refer friends to KidStart and we'll give you £5 to say thank you.
+                </p>
+              {{/inline-content-container}}
+            {{/block-content-container}}
+          {{/block-content-container}}
+        {{/column}}
+      {{/columns-container}}
+    {{/block-content-container}}
+
+    {{#> block-content-container props='padded background alabaster' align='center' }}
+      {{> footer }}
+    {{/block-content-container}}
+    {{> view-online }}
+  {{/email-container}}
+{{/default-layout}}

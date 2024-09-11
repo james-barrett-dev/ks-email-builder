@@ -1,0 +1,39 @@
+<table class="navigation" border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td class="navigation_inner">
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <th class="column">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td class="navigation_logo">
+                  <a href="{{#if logoUrl}}{{ logoUrl }}{{else}}#{{/if}}">
+                    <img class="image-fix" src="../src/images/components/navigation/kidstart-logo-{{ logo }}.png" width="174" height="56" alt="KidStart logo"/>
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </th>
+          {{#if noLinks}}
+          {{else}}
+            <th class="column navigation_links_container">
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td align="right">
+                    <table class="navigation_links {{ props }}" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="{{ props }}"><a class="{{ props }} {{#if navColourOne}}colour {{ navColourOne }}{{else}}{{/if}}" href="{{#if navUrlOne}}{{ navUrlOne }}{{else}}#{{/if}}">{{#if navTextOne}}{{ navTextOne }}{{else}}TUI Holiday Hub{{/if}}</a></td>
+                        <td class="{{ props }}"><a class="{{ props }} {{#if navColourTwo}}colour {{ navColourTwo }}{{else}}{{/if}}" href="{{#if navUrlTwo}}{{ navUrlTwo }}{{else}}#{{/if}}">{{#if navTextTwo}}{{ navTextTwo }}{{else}}My Home{{/if}}</a></td>
+                        <td class="{{ props }}"><a class="{{ props }} {{#if navColourThree}}colour {{ navColourThree }}{{else}}{{/if}}" href="{{#if navUrlThree}}{{ navUrlThree }}{{else}}#{{/if}}">{{#if navTextThree}}{{ navTextThree }}{{else}}Refer &amp; Earn{{/if}}</a></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </th>
+          {{/if}}
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

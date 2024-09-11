@@ -1,0 +1,12 @@
+.image.responsive {
+  //display: block;
+  @media screen and (max-width: $mobile-breakpoint) {
+    width: 100% !important;
+  }
+  img {
+    @media screen and (max-width: $mobile-breakpoint) {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+  }
+}

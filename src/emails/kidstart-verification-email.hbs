@@ -1,0 +1,49 @@
+{{#> default-layout subject='KidStart verification email'}}
+  {{#> email-container width='640'}}
+    {{#> block-content-container props='padded background white'}}
+      {{> navigation props='fontFamily bariol' 
+        logo='colour'
+        noLinks='true'
+      }}
+    {{/block-content-container}}
+
+    {{#> block-content-container props='background white' align='center'}}
+      <h2 class="margin bottomSixteen fontFamily arial fontSize headline titleMobile colour thunderbird">
+        <span class="fontFamily barlow fontSize headline titleMobile colour thunderbird">
+          Get free money to kick-start your baby or baby-to-be's future
+        </span>
+      </h2>
+    {{/block-content-container}}
+
+    {{#> block-content-container props='padded background white'}}
+      {{#> block-content-container props='spacing bottomThirtyTwo bottomFortyMobile' align='left'}}
+        <p class="margin bottomSixteen fontFamily bariol fontSize title subheaderMobile colour abbey">
+          <strong class="fontFamily bariol fontSize title subheaderMobile colour abbey">Hi James,</strong><br>
+        </p>
+
+        <p class="fontFamily bariol fontSize title subheaderMobile colour abbey">
+          KidStart is a kids savings account which can be topped-up with free money from retailers.
+        </p>
+      {{/block-content-container}}
+    {{/block-content-container}}
+
+    {{#> block-content-container props='spacing bottomThirtyTwo bottomFortyMobile background white' align='center'}}
+      {{> button type='thunderbird' props='fontFamily bariol fontSize subheader colour white' align='center' title='Let\'s get it set up' url='#'}}
+    {{/block-content-container}}
+
+    {{#> block-content-container props='padded background white'}}
+      {{#> block-content-container props='spacing bottomFortyEight bottomFortyMobile' align='left'}}
+        <p class="fontFamily bariol fontSize title subheaderMobile colour abbey">
+          Set-up the account now to start saving for your baby-to-be and any other children you have.
+        </p>
+      {{/block-content-container}}
+    {{/block-content-container}}
+
+    {{#> block-content-container props='padded background alabaster' align='center' }}
+      {{> footer }}
+    {{/block-content-container}}
+    {{> view-online }}
+  {{/email-container}}
+{{/default-layout}}
+
+

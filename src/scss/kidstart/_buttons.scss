@@ -1,0 +1,17 @@
+.button {
+  a {
+    font-family: Arial, sans-serif;
+  }
+  a > span {
+    font-family: Bariol Regular, Arial, sans-serif!important;
+  }
+}
+
+.button.thunderbird {
+  table td {
+    background-color: $thunderbird;
+  }
+  a {
+    color: $white;
+  }
+}

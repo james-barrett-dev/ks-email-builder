@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:v="urn:schemas-microsoft-com:vml"
+ xmlns:o="urn:schemas-microsoft-com:office:office">
+  <head>
+    <title>
+      {{ subject }}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--[if gte mso 9]><xml>
+      <o:OfficeDocumentSettings>
+        <o:AllowPNG/>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml><![endif]-->
+    <!--[if !mso>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <![endif-->
+    <meta name="viewport" content="width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <link href="./main.css" media="all" rel="stylesheet" type="text/css" />
+    {{> fonts props='{{ fonts }}' }}
+  </head>
+  <body>
+    {{#> preheader}}
+      {{ subject }}
+    {{/preheader}}
+    {{> @partial-block }}
+  </body>
+</html>
+

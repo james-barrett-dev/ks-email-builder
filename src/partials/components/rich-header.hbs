@@ -1,0 +1,43 @@
+<table class="rich-header {{ props }}" cellpadding="0" cellspacing="0" border="0" width="100%">
+  <tbody>
+    <tr>
+      <td class="{{ props }}">
+        {{#> block-content-container props='padded' align='center' }}
+          {{> navigation props='fontFamily bariol colour white' logo='white' }}
+          {{#> block-content-container props='spacing bottomThirtyTwo bottomFortyMobile' align='left'}}
+            {{> image 
+                type='responsive'
+                src='../src/images/placeholders/windmill-girl-hero_1184_x2.png'
+                width='592'
+                alt='Photo of a girl with a brightly coloured toy windmill'
+            }}
+          {{/block-content-container}}
+          {{#> block-content-container props='spacing bottomThirtyTwo bottomFortyMobile' align='left'}}
+            <p class="fontFamily bariol fontSize title subheaderMobile colour white">
+              <strong>Hi James,</strong><br>
+              At vero eos et accusamus et iusto odio dignissimos. Quas molestias excepturi sint occaecati cupiditate non provident. quas molestias excepturi sint occaecati cupiditate non provident. Quas molestias excepturi sint occaecati cupiditate non provident.
+            </p>
+          {{/block-content-container}}
+          {{#> block-content-container props='spacing bottomForty' align='center'}}
+            {{> button type='thunderbird' props='fontFamily bariol fontSize subheader colour white' align='center' title='Start saving now' url='#'}}
+          {{/block-content-container}}
+        {{/block-content-container}}
+        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+          <tr>
+            <td class="rich-header_triangular-cut {{ sliceColour}}" valign="top">
+              <!--[if gte mso 9]>
+              <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="tile" stroke="false" style="width: 640px; height: 24px;">
+                <v:fill type="frame" chromakey="white" src="../src/images/components/rich-header/triangular-cut_{{ sliceColour }}_x1.png"/>
+                <v:textbox inset="0,0,0,0">
+              <![endif]-->
+              <!--[if gte mso 9]>
+                </v:textbox>
+              </v:rect>
+              <![endif]-->
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>

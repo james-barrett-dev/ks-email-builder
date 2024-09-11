@@ -1,0 +1,30 @@
+{{#> default-layout subject='Red heading version 2 with button'}}
+  {{#> email-container width='640'}}
+    {{#> block-content-container props='padded background thunderbird'}}
+      {{> navigation props='fontFamily bariol colour white' logo='white' noLinks='true'}}
+    {{/block-content-container}}
+
+    {{#> block-content-container props='padded spacing topForty background white'}}
+      {{#> block-content-container props='spacing bottomThirtyTwo' align='left'}}
+        <p class="fontFamily bariol fontSize title subheaderMobile colour abbey">
+          <strong class="fontFamily bariol fontSize title subheaderMobile colour abbey">Hi James,</strong><br>
+          You have a new message in your KidStart account.
+        </p>
+      {{/block-content-container}}
+    {{/block-content-container}}
+
+    {{#> block-content-container props='padded spacing bottomTwentyFour bottomFortyMobile background white' align='center'}}
+      {{> button type='thunderbird' props='fontFamily bariol fontSize subheader colour white' align='center' title='View message' url='#'}}
+    {{/block-content-container}}
+
+    {{#> block-content-container props='padded background white spacing bottomFortyEight'}}
+      <p class="fontFamily bariol fontSize title subheaderMobile colour abbey">
+        <strong class="fontFamily bariol fontSize title subheaderMobile colour abbey">KidStart HQ x</strong>
+      </p>
+    {{/block-content-container}}
+
+    {{#> block-content-container props='padded background alabaster' align='center' }}
+      {{> footer }}
+    {{/block-content-container}}
+  {{/email-container}}
+{{/default-layout}}

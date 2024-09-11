@@ -1,0 +1,53 @@
+{{#> default-layout subject='Welcome 2'}}
+  {{#> email-container width='640'}}
+    {{#> block-content-container props='padded background white'}}
+      {{> navigation props='fontFamily bariol colour black' 
+        logo='colour'
+        logoUrl='#'
+        navUrlOne='#'
+        navTextOne='TUI Holiday Hub'
+        navUrlTwo='#'
+        navUrlTwo='My Home'
+        navUrlThree='#'
+        navTextThree='Refer & Earn'
+      }}
+    {{/block-content-container}}
+
+    {{#> block-content-container props='padded background white'}}
+      {{#> block-content-container props='spacing bottomForty'}}
+        {{> image 
+            type='responsive'
+            src='../src/images/emails/welcome-2-hero_592x368.png'
+            width='592'
+            alt='Graphic showing written dialogue in instant messaging program with conversation between parents about being referred to KidStart'
+            url='#'
+        }}
+      {{/block-content-container}}
+      {{#> block-content-container props='padded background white spacing bottomEight' align='center'}}
+        <h2 class="fontFamily arial fontSize headline titleMobile colour abbey">
+          <span class="fontFamily barlow fontSize title titleMobile">
+            James' unique link:
+          </span>
+        </h2>
+      {{/block-content-container}}
+      {{#> block-content-container props='padded background white spacing bottomTwentyFour' align='center'}}
+        <p class="fontFamily arial fontSize display titleMobile colour thunderbird fontWeight bold">
+          www.kidstart.co.uk/r1/5356362
+        </p>
+      {{/block-content-container}}
+      {{#> block-content-container props='spacing bottomFortyEight bottomFortyMobile' align='left'}}
+        <p class="margin bottomTwentyFour fontFamily bariol fontSize title subheaderMobile colour abbey">
+          Share your link with your friends and when they join KidStart and earn £5, you'll get £5 too! Pass on the link above or head <a class="colour thunderbird fontWeight bold" href="#"><span class="colour thunderbird fontWeight bold">here</span></a> and let them know via WhatsApp, SMS or social media.
+        </p>
+        <p class="fontFamily bariol fontSize title subheaderMobile colour abbey">
+          <strong class="fontFamily bariol fontSize title subheaderMobile colour abbey">KidStart HQ x</strong>
+        </p>
+      {{/block-content-container}}
+    {{/block-content-container}}
+
+    {{#> block-content-container props='padded background alabaster' align='center' }}
+      {{> footer }}
+    {{/block-content-container}}
+    {{> view-online }}
+  {{/email-container}}
+{{/default-layout}}

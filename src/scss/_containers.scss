@@ -1,0 +1,30 @@
+@media screen and (max-width: $mobile-breakpoint) {
+  .email-container {
+    width: 100% !important;
+  }
+}
+
+.block-content-container.padded {
+  padding-left: $base-unit * 3;
+  padding-right: $base-unit * 3;
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-left: $base-unit !important;
+    padding-right: $base-unit !important;
+  }
+}
+
+.inline-content-container.fullWidthOnMobile {
+  @media screen and (max-width: $mobile-breakpoint) {
+    width: 100% !important;
+  }
+}
+
+.columns-container {
+  table-layout: fixed;
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+  .columns-container {
+    width: 100% !important;
+  }
+}

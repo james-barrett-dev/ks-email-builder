@@ -1,0 +1,28 @@
+@media screen and (max-width: $mobile-breakpoint) {
+  .column {
+    display: block !important;
+    padding: 0 !important;
+    width: 100% !important;
+    font-size: normal !important;
+  }
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+  .column_content {
+    padding: 0 !important;
+    font-size: normal !important;
+  }
+}
+
+.column_content.left {
+  padding-right: 12px;
+}
+
+.column_content.right {
+  padding-left: 12px;
+}
+
+.column_content.middle {
+  padding-right: 12px;
+  padding-left: 12px;
+}

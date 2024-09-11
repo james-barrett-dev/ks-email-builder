@@ -1,0 +1,25 @@
+@media yahoo {
+  .yahoo-hide {
+    max-height: 0px !important;
+    overflow: hidden !important;
+    display: none !important;
+  }
+
+  .yahoo-show {
+    display: table-cell !important;
+  }
+  
+  .yahoo-100 {
+    width: 100% !important;
+  }
+}
+
+.thread-item.expanded .thread-body .body, 
+.msg-body {
+  display: block !important;
+  width: 100% !important;
+}
+
+.yshortcuts a {
+  border-bottom: none !important;
+}

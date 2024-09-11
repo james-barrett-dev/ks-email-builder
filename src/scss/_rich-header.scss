@@ -1,0 +1,27 @@
+.rich-header_triangular-cut {
+  height: $base-unit * 3;
+  font-size: $base-unit * 3;
+  line-height: $base-unit * 3;
+  background-size: 100%;
+  background-size: cover; 
+  background-position: center center;
+  background-repeat: repeat;
+}
+
+.rich-header_triangular-cut.danube {
+  background: url(../src/images/components/rich-header/triangular-cut_danube_x1.png) center/cover;
+  background-image: url(../src/images/components/rich-header/triangular-cut_danube_x1.png);
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2) and ( max-width: 2000px),
+only screen and (   min--moz-device-pixel-ratio: 2) and ( max-width: 2000px),
+only screen and (     -o-min-device-pixel-ratio: 2/1) and ( max-width: 2000px),
+only screen and (        min-device-pixel-ratio: 2) and ( max-width: 2000px),
+only screen and (                min-resolution: 192dpi) and ( max-width: 2000px),
+only screen and (                min-resolution: 2dppx) and ( max-width: 2000px) { 
+  .rich-header_triangular-cut.danube {
+    background: url(../src/images/components/rich-header/triangular-cut_danube_x2.png) center/cover !important;
+    background-image: url(../src/images/components/rich-header/triangular-cut_danube_x2.png) !important;
+  }
+}

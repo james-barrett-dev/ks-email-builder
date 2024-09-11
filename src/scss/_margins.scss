@@ -1,0 +1,131 @@
+.margin.topFortyEight {
+  margin-top: $base-unit * 6;
+}
+
+.margin.bottomFortyEight {
+  margin-bottom: $base-unit * 6;
+}
+
+.margin.topForty {
+  margin-top: $base-unit * 5;
+}
+
+.margin.bottomForty {
+  margin-bottom: $base-unit * 5;
+}
+
+.margin.topThirtyTwo {
+  margin-top: $base-unit * 4;
+}
+
+.margin.bottomThirtyTwo {
+  margin-bottom: $base-unit * 4;
+}
+
+.margin.topTwentyFour {
+  margin-top: $base-unit * 3;
+}
+
+.margin.bottomTwentyFour {
+  margin-bottom: $base-unit * 3;
+}
+
+.margin.topSixteen {
+  margin-top: $base-unit * 2;
+}
+
+.margin.bottomSixteen {
+  margin-bottom: $base-unit * 2;
+}
+
+.margin.topEight {
+  margin-top: $base-unit;
+}
+
+.margin.bottomEight {
+  margin-bottom: $base-unit;
+}
+
+.margin.topFortyEightMobile {
+  @media screen and (max-width: $mobile-breakpoint) {
+    margin-top: $base-unit * 6 !important;
+  }
+}
+
+.margin.bottomFortyEightMobile {
+  @media screen and (max-width: $mobile-breakpoint) {
+    margin-bottom: $base-unit * 6 !important;
+  }
+}
+
+.margin.topFortyMobile {
+  @media screen and (max-width: $mobile-breakpoint) {
+    margin-top:  $base-unit * 6 !important;
+  }
+}
+
+.margin.bottomFortyMobile {
+  @media screen and (max-width: $mobile-breakpoint) {
+    margin-bottom: $base-unit * 5 !important;
+  }
+}
+
+.margin.topThirtyTwoMobile {
+  @media screen and (max-width: $mobile-breakpoint) {
+    margin-top: $base-unit * 4 !important;
+  }
+}
+
+.margin.bottomThirtyTwoMobile {
+  @media screen and (max-width: $mobile-breakpoint) {
+    margin-bottom: $base-unit * 4 !important;
+  }
+}
+
+.margin.topTwentyFourMobile {
+  @media screen and (max-width: $mobile-breakpoint) {
+    margin-top: $base-unit * 3 !important;
+  }
+}
+
+.margin.bottomTwentyFourMobile {
+  @media screen and (max-width: $mobile-breakpoint) {
+    margin-bottom: $base-unit * 3 !important;
+  }
+}
+
+.margin.topSixteenMobile {
+  @media screen and (max-width: $mobile-breakpoint) {
+    margin-top: $base-unit * 2 !important;
+  }
+}
+
+.margin.bottomSixteenMobile {
+  @media screen and (max-width: $mobile-breakpoint) {
+    margin-bottom: $base-unit * 2 !important;
+  }
+}
+
+.margin.topEightMobile {
+  @media screen and (max-width: $mobile-breakpoint) {
+    margin-top: $base-unit !important;
+  }
+}
+
+.margin.bottomEightMobile {
+  @media screen and (max-width: $mobile-breakpoint) {
+    margin-bottom: $base-unit !important;
+  }
+}
+
+.margin.topZeroMobile {
+  @media screen and (max-width: $mobile-breakpoint) {
+    margin-top: 0 !important;
+  }
+}
+
+.margin.bottomZeroMobile {
+  @media screen and (max-width: $mobile-breakpoint) {
+    margin-bottom: 0 !important;
+  }
+}

@@ -1,0 +1,151 @@
+.spacing.topFiftySix {
+  padding-top: $base-unit * 7;
+}
+
+.spacing.bottomFiftySix {
+  padding-bottom: $base-unit * 7;
+}
+
+.spacing.topFortyEight {
+  padding-top: $base-unit * 6;
+}
+
+.spacing.bottomFortyEight {
+  padding-bottom: $base-unit * 6;
+}
+
+.spacing.topForty {
+  padding-top: $base-unit * 5;
+}
+
+.spacing.bottomForty {
+  padding-bottom: $base-unit * 5;
+}
+
+.spacing.topThirtyTwo {
+  padding-top: $base-unit * 4;
+}
+
+.spacing.bottomThirtyTwo {
+  padding-bottom: $base-unit * 4;
+}
+
+.spacing.topTwentyFour {
+  padding-top: $base-unit * 3;
+}
+
+.spacing.bottomTwentyFour {
+  padding-bottom: $base-unit * 3;
+}
+
+.spacing.topSixteen {
+  padding-top: $base-unit * 2;
+}
+
+.spacing.bottomSixteen {
+  padding-bottom: $base-unit * 2;
+}
+
+.spacing.topEight {
+  padding-top: $base-unit;
+}
+
+.spacing.bottomEight {
+  padding-bottom: $base-unit;
+}
+
+.spacing.bottomFiftySixMobile {
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-top: $base-unit * 7 !important;
+  }
+}
+
+.spacing.topFiftySixMobile {
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-bottom: $base-unit * 7 !important;
+  }
+}
+
+.spacing.topFortyEightMobile {
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-top: $base-unit * 6 !important;
+  }
+}
+
+.spacing.bottomFortyEightMobile {
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-bottom: $base-unit * 6 !important;
+  }
+}
+
+.spacing.topFortyMobile {
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-top: $base-unit * 5 !important;
+  }
+}
+
+.spacing.bottomFortyMobile {
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-bottom: $base-unit * 5 !important;
+  }
+}
+
+.spacing.topThirtyTwoMobile {
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-top: $base-unit * 4 !important;
+  }
+}
+
+.spacing.bottomThirtyTwoMobile {
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-bottom: $base-unit * 4 !important;
+  }
+}
+
+.spacing.topTwentyFourMobile {
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-top: $base-unit * 3 !important;
+  }
+}
+
+.spacing.bottomTwentyFourMobile {
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-bottom: $base-unit * 3 !important;
+  }
+}
+
+.spacing.topSixteenMobile {
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-top: $base-unit * 2 !important;
+  }
+}
+
+.spacing.bottomSixteenMobile {
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-bottom: $base-unit * 2 !important;
+  }
+}
+
+.spacing.topEightMobile {
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-top: $base-unit !important;
+  }
+}
+
+.spacing.bottomEightMobile {
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-bottom: $base-unit !important;
+  }
+}
+
+.spacing.topZeroMobile {
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-top: 0 !important;
+  }
+}
+
+.spacing.bottomZeroMobile {
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-bottom: 0 !important;
+  }
+}

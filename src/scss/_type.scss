@@ -1,0 +1,141 @@
+a {
+  color: inherit;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.fontFamily.arial {
+  font-family: Helvetica, Arial, sans-serif !important;
+}
+
+.fontFamily.arialNarrow {
+  font-family: Arial Narrow, Arial, sans-serif !important;
+}
+
+.fontFamily.bariol {
+  font-family: Bariol, Helvetica, Arial, sans-serif !important;
+}
+
+.fontFamily.barlow {
+  font-family: Barlow, Helvetica, Arial, sans-serif !important;
+}
+
+.fontFamily.roboto{
+  font-family: Roboto, Helvetica, Arial, sans-serif !important;
+}
+
+.fontSize.small {
+  font-size: $small-font-size;
+  line-height: $small-line-height;
+}
+
+.fontSize.caption {
+  font-size: $caption-font-size;
+  line-height: $caption-line-height;
+}
+
+.fontSize.body {
+  font-size: $body-font-size;
+  line-height: $body-line-height;
+}
+
+.fontSize.subheader {
+  font-size: $subheader-font-size;
+  line-height: $subheader-line-height;
+}
+
+.fontSize.title {
+  font-size: $title-font-size;
+  line-height: $title-line-height;
+}
+
+.fontSize.headline {
+  font-size: $headline-font-size;
+  line-height: $headline-line-height;
+}
+
+.fontSize.display {
+  font-size: $display-font-size;
+  line-height: $display-line-height;
+}
+
+.fontSize.grand {
+  font-size: $grand-font-size;
+  line-height: $grand-line-height;
+}
+
+.fontSize.jumbo {
+  font-size: $jumbo-font-size;
+  line-height: $jumbo-line-height;
+}
+
+.fontSize.mega {
+  font-size: $mega-font-size;
+  line-height: $mega-line-height;
+}
+
+.fontWeight.bold {
+  font-weight: 600;
+}
+
+.fontSize.regular {
+  font-weight: 400;
+}
+
+.fontSize.inherit {
+  font-size: inherit;
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+  .fontSize.smallMobile {
+    font-size: $small-font-size !important;
+    line-height: $small-line-height !important;
+  }
+
+  .fontSize.captionMobile {
+    font-size: $caption-font-size !important;
+    line-height: $caption-line-height !important;
+  }
+
+  .fontSize.bodyMobile {
+    font-size: $body-font-size !important;
+    line-height: $body-line-height !important;
+  }
+
+  .fontSize.subheaderMobile {
+    font-size: $subheader-font-size !important;
+    line-height: $subheader-line-height !important;
+  }
+
+  .fontSize.titleMobile {
+    font-size: $title-font-size !important;
+    line-height: $title-line-height !important;
+  }
+
+  .fontSize.headlineMobile {
+    font-size: $headline-font-size !important;
+    line-height: $headline-line-height !important;
+  }
+
+  .fontSize.displayMobile {
+    font-size: $display-font-size !important;
+    line-height: $display-line-height !important;
+  }
+
+  .fontSize.grandMobile {
+    font-size: $grand-font-size !important;
+    line-height: $grand-line-height !important;
+  }
+
+  .fontSize.jumboMobile {
+    font-size: $jumbo-font-size !important;
+    line-height: $jumbo-line-height !important;
+  }
+
+  .fontSize.megaMobile {
+    font-size: $mega-font-size !important;
+    line-height: $mega-line-height !important;
+  }
+}

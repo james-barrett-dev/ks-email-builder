@@ -1,0 +1,23 @@
+<table class="body-table" border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td class="body-cell" bgcolor="#f9f9f9" align="center">
+      <table class="email-container" border="0" cellpadding="0" cellspacing="0" width="{{ width }}" style="max-width: {{ width }}px">
+        <tr>
+          <td>
+            <!--[if (gte mso 9)|(IE)]>
+            <table align="center" border="0" cellspacing="0" cellpadding="0" width="{{ width }}">
+              <tr>
+                <td align="center" valign="top" width="{{ width }}">
+                <![endif]-->
+                  {{> @partial-block }}
+                <!--[if (gte mso 9)|(IE)]>
+                </td>
+              </tr>
+            </table>
+            <![endif]-->
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

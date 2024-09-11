@@ -1,0 +1,24 @@
+{
+  "scripts": {
+    "develop": "gulp build:dev",
+    "build": "gulp build:prod"
+  },
+  "dependencies": {
+    "gulp": "4.0.0",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-dart-sass": "^1.1.0",
+    "gulp-email-remove-unused-css": "^3.6.65",
+    "gulp-extname": "^0.2.2",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-hb": "^8.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-inline-css": "^3.4.0",
+    "gulp-replace": "^1.0.0",
+    "yargs": "^17.7.2"
+  },
+  "browserslist": [
+    ">0.25%",
+    "not dead",
+    "IE 11"
+  ]
+}

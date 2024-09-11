@@ -1,0 +1,28 @@
+.list-item {
+  &:last-of-type {
+    .list-item_inner {
+      padding-bottom: 0!important;
+    }
+  }
+}
+
+.list-item_inner {
+  padding-bottom: $base-unit * 2;
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-bottom: $base-unit;
+  }
+}
+
+.list-item_bullet {
+  vertical-align: top;
+  padding-top: $base-unit / 2;
+}
+
+.list-item_copy {
+  vertical-align: top;
+  padding-left: $base-unit * 2;
+  width: 100%;
+  font-size: $subheader-font-size;
+  line-height: $subheader-line-height;
+  color: $abbey;
+}

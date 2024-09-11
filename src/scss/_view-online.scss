@@ -1,0 +1,15 @@
+.view-online_tab {
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  background-color: $quill-gray;
+  border-radius: 20px 20px 0 0;
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-top: 8px;
+    padding-right: 20px;
+    padding-bottom: 8px;
+    padding-left: 20px;
+    border-radius: 16px 16px 0 0 !important;
+  }
+}

@@ -1,0 +1,56 @@
+{{#> default-layout subject='Red heading version 1'}}
+  {{#> email-container width='640'}}
+    {{#> block-content-container props='padded background thunderbird'}}
+      {{> navigation props='fontFamily bariol' 
+        logo='white'
+        navColourOne='white'
+        navColourTwo='white'
+        navColourThree='white'
+      }}
+    {{/block-content-container}}
+
+    {{#> block-content-container props='padded spacing topForty background white'}}
+      {{#> block-content-container props='spacing bottomThirtyTwo' align='left'}}
+        <p class="margin bottomSixteen fontFamily bariol fontSize title subheaderMobile colour abbey">
+          <strong class="fontFamily bariol fontSize title subheaderMobile colour abbey">Hi James,</strong><br>
+          We're thrilled to tell you that your first £5 has cleared in your kiddybank!
+        </p>
+
+        <p class="margin bottomSixteen fontFamily bariol fontSize title subheaderMobile colour abbey">
+          With most child savings providers you will have to wait until you reach £10 before we can transfer this into your little one's savings account.
+        </p>
+
+        <p class="margin bottomSixteen fontFamily bariol fontSize title subheaderMobile colour abbey">
+          However, with a KidSave account we can transfer this now, meaning you can start growing their savings even sooner.
+        </p>
+
+        <p class="margin bottomSixteen fontFamily bariol fontSize title subheaderMobile colour abbey">
+          A KidSave account is easy to open online and can be topped up with just KidStart Savings or contributions from your and family members too.
+        </p>
+
+        <p class="margin bottomSixteen fontFamily bariol fontSize title subheaderMobile colour abbey">
+          Find out more and how to open a <a class="colour thunderbird" href="#"><span class="colour thunderbird">KidSave account here</span></a>.
+        </p>
+
+        <p class="fontFamily bariol fontSize title subheaderMobile colour abbey">
+          Happy saving<br>
+          <strong class="fontFamily bariol fontSize title subheaderMobile colour abbey">KidStart HQ x</strong>
+        </p>
+      {{/block-content-container}}
+    {{/block-content-container}}
+
+    {{#> block-content-container props='padded background white spacing bottomThirtyTwo'}}
+      {{> divider props='thunderbird'}}
+    {{/block-content-container}}
+
+    {{#> block-content-container props='padded background white spacing bottomFortyEight bottomFortyMobile'}}
+      <p class="fontFamily bariol fontSize title subheaderMobile colour abbey">
+        Please note: As with any investing, the value of funds can rise and fall at times and you could receive back less than you invested.
+      </p>
+    {{/block-content-container}}
+
+    {{#> block-content-container props='padded background alabaster' align='center' }}
+      {{> footer }}
+    {{/block-content-container}}
+  {{/email-container}}
+{{/default-layout}}

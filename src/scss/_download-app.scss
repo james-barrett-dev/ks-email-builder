@@ -1,0 +1,32 @@
+.download-app {
+
+}
+
+.download-app_heading {
+  padding-bottom: $base-unit * 4;
+}
+
+.download-app_iphone-image {
+  padding-bottom: $base-unit * 4;
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-bottom: $base-unit * 3 !important;
+  }
+}
+
+.download-app_app-icons {
+  
+}
+
+.download-app_app-icons_left {
+  padding-right: 12px;
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-right: $base-unit !important;
+  }
+}
+
+.download-app_app-icons_right {
+  padding-left: 12px;
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-right: $base-unit !important;
+  }
+}

@@ -1,0 +1,29 @@
+v\:* { 
+  behavior: url(#default#VML); 
+  display: inline-block; 
+}
+
+table,
+td {
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+}
+
+#outlook a {
+  padding: 0;
+}
+
+span.MsoHyperlink {
+  mso-style-priority: 99;
+  color: inherit;
+}
+
+span.MsoHyperlinkFollowed {
+  mso-style-priority: 99;
+  color: inherit;
+}
+
+.outlook div {
+  font-size: 0px !important;
+  display: block !important;
+}

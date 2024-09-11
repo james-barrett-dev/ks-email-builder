@@ -1,0 +1,142 @@
+{{#> default-layout subject='Second purchase'}}
+  {{#> email-container width='640'}}
+    {{#> block-content-container props='padded background mandys-pink'}}
+      {{> navigation props='fontFamily bariol colour white' 
+        logo='white'
+        logoUrl='#'
+        navUrlOne='#'
+        navTextOne='TUI Holiday Hub'
+        navUrlTwo='#'
+        navUrlTwo='My Home'
+        navUrlThree='#'
+        navTextThree='Refer & Earn'
+      }}
+    {{/block-content-container}}
+
+    {{#> block-content-container props='padded background mandys-pink'}}
+      {{#> block-content-container props='spacing bottomForty bottomThirtyTwoMobile'}}
+        {{> image 
+            type='responsive'
+            src='../src/images/emails/second-purchase-hero_592x296.jpg'
+            width='592'
+            alt='Photo of a happy child with a toy bear'
+            url=''
+        }}
+      {{/block-content-container}}
+      {{#> block-content-container props='spacing bottomThirtyTwo' align='left'}}
+        <p class="margin bottomSixteen fontFamily bariol fontSize title subheaderMobile colour white">
+          <strong class="fontFamily bariol fontSize title subheaderMobile colour white">Hi James,</strong><br>
+        </p>
+        <p class="margin bottomSixteen fontFamily bariol fontSize title subheaderMobile colour white">
+          <strong class="fontFamily bariol fontSize title subheaderMobile colour white">Your child's Kiddybank is growing - well done!</strong><br>
+        </p>
+        <p class="margin bottomSixteen fontFamily bariol fontSize title subheaderMobile colour white">
+          You have earned £x from partner name for xxx
+        </p>
+        <p class="margin bottomSixteen fontFamily bariol fontSize title subheaderMobile colour white">
+          Whether small or large, every little helps. You're giving your little one a brighter future.
+        </p>
+      {{/block-content-container}}
+
+      {{#> block-content-container props='spacing bottomForty bottomThirtyTwoMobile' align='center'}}
+        {{> button type='thunderbird' props='fontFamily bariol fontSize subheader colour white' align='center' title='View kiddybank balance' url=''}}
+      {{/block-content-container}}
+
+      {{#> block-content-container props='spacing bottomFortyEight bottomFortyMobile' align='left'}}
+        <p class="fontFamily bariol fontSize title subheaderMobile colour white">
+          Happy saving<br>
+          <strong class="fontFamily bariol fontSize title subheaderMobile colour white">KidStart HQ x</strong>
+        </p>
+      {{/block-content-container}}
+    {{/block-content-container}}
+
+    {{#> block-content-container props='padded background white spacing topFortyEight topFortyMobile' align='center'}}
+      <h2 class="fontFamily arial fontSize headline titleMobile colour accent-4">
+        <span class="fontFamily barlow fontSize headline titleMobile">
+          Handy tips to save even more for your little one
+        </span>
+      </h2>
+    {{/block-content-container}}
+
+    {{#> block-content-container props='spacing topTwentyFour topFortyEight topFortyEightMobile bottomThirtyTwo bottomFortyMobile padded background white'}}
+      {{#> columns-container}} 
+        {{#> column width='180'}}
+          {{#> block-content-container props='background' align='left' }}
+            {{#> block-content-container props='spacing bottomTwentyFour'}}
+              {{> image 
+                  type='responsive'
+                  src='../src/images/emails/mobile-and-broadband-icon.png'
+                  width='180'
+                  alt='Mobile & Broadband'
+                  url=''
+              }}
+            {{/block-content-container}}
+            {{#> block-content-container align='left'}}
+              {{#> inline-content-container props='fullWidthOnMobile spacing bottomTwentyFour' align='center' width='180'}}
+                <h3 class="margin bottomEight fontFamily barlow fontSize title subheaderMobile colour abbey">
+                  Mobile & Broadband
+                </h3>
+                <p class="fontFamily bariol fontSize body subheaderMobile colour abbey">
+                  Save on your mobile and broadband contracts with KidStart
+                </p>
+              {{/inline-content-container}}
+            {{/block-content-container}}
+          {{/block-content-container}}
+        {{/column}}
+
+        {{#> column width='184' }}
+          {{#> block-content-container props='background' align='center'}}
+            {{#> block-content-container props='spacing bottomTwentyFour'}}
+              {{> image 
+                  type='responsive'
+                  src='../src/images/emails/renewing-insurance-icon.png'
+                  width='184'
+                  alt='Renewing insurance'
+                  url=''
+              }}
+            {{/block-content-container}}
+            {{#> block-content-container align='center'}}
+              {{#> inline-content-container props='fullWidthOnMobile spacing bottomTwentyFour' align='center' width='180'}}
+                <h3 class="margin bottomEight fontFamily barlow fontSize title subheaderMobile colour abbey">
+                  Renewing insurance
+                </h3>
+                <p class="fontFamily bariol fontSize body subheaderMobile colour abbey">
+                  Boost your little one's savings when buying insurance
+                </p>
+              {{/inline-content-container}}
+            {{/block-content-container}}
+          {{/block-content-container}}
+        {{/column}}
+
+        {{#> column width='180' }}
+          {{#> block-content-container props='background' align='right'}}
+            {{#> block-content-container props='spacing bottomTwentyFour'}}
+              {{> image 
+                  type='responsive'
+                  src='../src/images/emails/everyday-purchases-icon.png'
+                  width='180'
+                  alt='Everyday purchases'
+                  url=''
+              }}
+            {{/block-content-container}}
+            {{#> block-content-container align='right'}}
+              {{#> inline-content-container props='fullWidthOnMobile spacing bottomTwentyFour' align='center' width='180'}}
+                <h3 class="margin bottomEight fontFamily barlow fontSize title subheaderMobile colour abbey">
+                  Everyday purchases
+                </h3>
+                <p class="fontFamily bariol fontSize body subheaderMobile colour abbey">
+                  From your weekly food to household essentials to toiletries
+                </p>
+              {{/inline-content-container}}
+            {{/block-content-container}}
+          {{/block-content-container}}
+        {{/column}}
+      {{/columns-container}}
+    {{/block-content-container}}
+
+    {{#> block-content-container props='padded background alabaster' align='center' }}
+      {{> footer }}
+    {{/block-content-container}}
+    {{> view-online }}
+  {{/email-container}}
+{{/default-layout}}

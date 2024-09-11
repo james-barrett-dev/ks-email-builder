@@ -1,0 +1,57 @@
+.pod_image {
+  padding-bottom: $base-unit * 3;
+  img {
+    @media screen and (max-width: $mobile-breakpoint) {
+      width: 100% !important;
+    }
+  }
+}
+
+.pod_title {
+  padding-bottom: $base-unit;
+  h3 {
+    color: $abbey;
+    font-family: Arial, sans-serif !important;
+    font-weight: 700;
+    font-size: $title-font-size;
+    line-height: $title-line-height;
+    span {
+      font-family: Barlow, Arial, sans-serif !important;
+      font-weight: 700;
+      font-size: $title-font-size;
+      line-height: $title-line-height;
+    }
+  }
+}
+
+.pod_details {
+  padding-bottom: $base-unit;
+  p {
+    color: $abbey;
+    font-size: $base-unit * 2;
+    line-height: $base-unit * 3;
+  }
+}
+
+.pod_cta {
+  padding-bottom: $base-unit * 3;
+  p {
+    color: $thunderbird;
+    font-weight: 700;
+    font-size: $base-unit * 2;
+    line-height: $base-unit * 3;
+  }
+}
+
+.pod_cta {
+  p {
+    color: $thunderbird;
+  }
+}
+
+.pod_button {
+  padding-bottom: $base-unit * 6;
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-bottom: $base-unit * 5 !important;
+  }
+}

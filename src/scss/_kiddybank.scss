@@ -1,0 +1,139 @@
+.kiddybank {
+  td {
+    @media screen and (max-width: $mobile-breakpoint) {
+      word-break: normal !important;
+    }
+  }
+}
+
+.kiddybank_inner {
+  padding-top: $base-unit * 5;
+  padding-bottom: $base-unit * 7;
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-top: $base-unit * 3 !important;
+    padding-bottom: $base-unit * 4 !important;
+  }
+}
+
+.kiddybank_scalloped-edge {
+  height: $base-unit;
+  font-size: $base-unit;
+  line-height: $base-unit;
+  background-size: 100%;
+  background-size: cover; 
+  background-position: center center;
+  background-repeat: repeat;
+}
+
+.kiddybank_scalloped-edge.top {
+  background: url(../src/images/components/kiddybank/kiddybank_scalloped-edge_top_x1.png) center/cover;
+  background-image: url(../src/images/components/kiddybank/kiddybank_scalloped-edge_top_x1.png);
+}
+
+.kiddybank_scalloped-edge.bottom {
+  background: url(../src/images/components/kiddybank/kiddybank_scalloped-edge_bottom_x1.png) center/cover;
+  background-image: url(../src/images/components/kiddybank/kiddybank_scalloped-edge_bottom_x1.png);
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2) and ( max-width: 2000px),
+only screen and (   min--moz-device-pixel-ratio: 2) and ( max-width: 2000px),
+only screen and (     -o-min-device-pixel-ratio: 2/1) and ( max-width: 2000px),
+only screen and (        min-device-pixel-ratio: 2) and ( max-width: 2000px),
+only screen and (                min-resolution: 192dpi) and ( max-width: 2000px),
+only screen and (                min-resolution: 2dppx) and ( max-width: 2000px) { 
+  .kiddybank_scalloped-edge.top {
+    background: url(../src/images/components/kiddybank/kiddybank_scalloped-edge_top_x2.png) center/cover !important;
+    background-image: url(../src/images/components/kiddybank/kiddybank_scalloped-edge_top_x2.png) !important;
+  }
+
+  .kiddybank_scalloped-edge.bottom {
+    background: url(../src/images/components/kiddybank/kiddybank_scalloped-edge_bottom_x2.png) center/cover !important;
+    background-image: url(../src/images/components/kiddybank/kiddybank_scalloped-edge_bottom_x2.png) !important;
+  }
+}
+
+.kiddybank_heading {
+  padding-bottom: $base-unit * 4;
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-bottom: 24px!important;
+  }
+}
+
+.kiddybank_pod {
+  padding-top: $base-unit * 2;
+  padding-bottom: $base-unit * 2;
+  background-color: $white-ice-light;
+  border-radius: $base-unit;
+}
+
+.kiddybank_pod_wrapper {
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-right: 0 !important;
+    padding-left: 0 !important
+  }
+}
+
+.kiddybank_pod_wrapper.first {
+  padding-right: $base-unit;
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-bottom: $base-unit !important;
+  }
+}
+
+.kiddybank_pod_wrapper.second {
+  padding-right: $base-unit;
+  padding-left: $base-unit;
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-bottom: $base-unit !important;
+  }
+}
+
+.kiddybank_pod_wrapper.third {
+  padding-left: $base-unit;
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-bottom: $base-unit !important;
+  }
+}
+
+.kiddybank_pod_wrapper.fourth {
+  padding-top: $base-unit * 3;
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-top: 0 !important;
+  }
+  .kiddybank_pod {
+    padding-right: $base-unit * 20;
+    padding-left: $base-unit * 20;
+    background-color: $white;
+  }
+}
+
+.kiddybank_pod_title {
+  padding-bottom: $base-unit;
+  h3 {
+    color: $paradiso;
+    font-family: Arial, sans-serif !important;
+    font-weight: 700;
+    font-size: $subheader-font-size;
+    line-height: $subheader-line-height;
+    span {
+      font-family: Barlow, Arial, sans-serif !important;
+      font-weight: 700;
+      font-size: $subheader-font-size;
+      line-height: $subheader-line-height;
+    }
+  }
+}
+
+.kiddybank_pod_sum {
+  p {
+    color: $paradiso;
+    font-size: $headline-font-size;
+    line-height: $headline-line-height;
+    span {
+      font-size: $headline-font-size;
+      line-height: $headline-line-height;
+      white-space: nowrap;
+    }
+  }
+}

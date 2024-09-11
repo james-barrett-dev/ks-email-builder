@@ -1,0 +1,37 @@
+{{#> default-layout subject='Thank you for registering with KidStart'}}
+  {{#> email-container width='480'}}
+    {{#> block-content-container props='padded background white spacing topThirtyTwo bottomThirtyTwo'}}
+      <p class="fontFamily bariol margin bottomTwentyFour fontSize subheader">
+        <strong>Dear James</strong>,</br>
+        Thank you for registering with KidStart.
+      </p>
+
+      <p class="fontFamily bariol margin bottomTwentyFour fontSize subheader">
+        Click here to confirm your email address and complete your registration.
+      </p>
+
+      <p class="fontFamily bariol fontSize subheader">
+        Happy Shopping!</br>
+        The Team at KidStart
+      </p>
+    {{/block-content-container}}
+    {{#> block-content-container props='padded background white spacing bottomThirtyTwo'}}
+      {{> divider props='thunderbird'}}
+    {{/block-content-container}}
+    {{#> block-content-container props='padded background white spacing bottomThirtyTwo'}}
+      <p class="fontFamily bariol fontSize subheader fontSizeMobile subheader">
+        If the link above doesn't work, then please copy the entire line below into your browser search bar.
+      </p>
+    {{/block-content-container}}
+    {{#> block-content-container props='padded background white'}}
+      <p class="fontFamily bariol fontSize subheader">
+        <strong>
+          {{userData name='linkURL'}}
+        </strong>
+      </p>
+    {{/block-content-container}}
+    {{#> block-content-container props='padded background alabaster spacing topThirtyTwo bottomThirtyTwo' align='center' }}
+      {{> footer-small }}
+    {{/block-content-container}}
+  {{/email-container}}
+{{/default-layout}}
