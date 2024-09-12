@@ -31,6 +31,7 @@
       }
 
       div {
+        max-width: 48rem;
         padding: 2rem;
       }
 
@@ -38,11 +39,11 @@
         padding: .5rem;
       }
 
-      @media screen and (max-width: 640px) {
-        br {
-          display: none;
-        }
+      /*
+        !important used to counteract effects of css inliner adding everything to inline styles.
+      */
 
+      @media screen and (max-width: 640px) {
         div {
           padding: .5rem !important;
         }
@@ -56,11 +57,14 @@
   <body>
     <div>
       <div>
+        <h1>
+          Hi there. 🙂
+        </h1>
         <p>
-          <strong>Hi there. 🙂 </strong>This is a collection of emails created for KidStart.
+          This is a collection of emails created for KidStart.
         </p>
         <p>
-          They were created using the <strong><a href="https://github.com/james-barrett-dev/ks-email-builder">build system</a></strong> I developed at KidStart for this purpose.
+          They were created using the <a href="https://github.com/james-barrett-dev/ks-email-builder">build system</a> I developed at KidStart for this purpose.
         </p>
         <p>
           <strong>I recommend viewing 'All components' first.</strong>
@@ -69,10 +73,10 @@
           Have a look at the <strong><a href="./images/mockups/all-components.png">original full-colour mockup</a></strong> to compare fidelity to my original design.
         </p>
         <p>
-          All emails are derived from this core set of components.
+          All the sample emails are derived from this core set of components.
         </p>
         <p>
-          🚨 If you are reviewing the code of these rendered emails,</br> please note that the CSS/HTML has been run through a minifier, and won't be pretty.</br> 
+          🚨 If you are reviewing the code of these rendered emails, please note that the CSS/HTML has been run through a minifier.
           Review the original <a href="https://github.com/james-barrett-dev/ks-email-builder/tree/master/src/emails">source templates</a> in the <a href="https://github.com/james-barrett-dev/ks-email-builder">build system</a>.
         </p>
       </div>
