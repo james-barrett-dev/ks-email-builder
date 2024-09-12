@@ -1,6 +1,6 @@
 # KS Email Builder
 
-This project is designed to help the KidStart marketing department build responsive email templates using SCSS for styling and Handlebars for templating. The build process includes CSS inlining, media query grouping, HTML minification, and removal of unused CSS.
+This project is designed to help the KidStart marketing department build responsive email templates using SCSS for styling and Handlebars for templating. The build process includes CSS inlining, media query grouping, HTML minification, removal of unused CSS, and serving the files via a local development server.
 
 ## Author
 
@@ -15,6 +15,7 @@ This project was created and maintained by James Barrett.
 - **Unused CSS Removal**: Automatically prune unused CSS to reduce file size.
 - **HTML Minification**: Minify HTML files to reduce file size for production.
 - **File Watching**: Watch for changes in SCSS and Handlebars files and rebuild automatically during development.
+- **Local Development Server**: Serve the built emails locally via a BrowserSync server for real-time previews and updates.
 
 ## Installation
 
@@ -41,22 +42,25 @@ This project was created and maintained by James Barrett.
 ```bash
 /src
   /scss            # SCSS files for styling emails
-  /emails          # Handlebars email templates
-  /partials        # Handlebars partials used in templates
+  /emails          # Email templates
+  /components      # Components used in templates
   /images          # Local image assets
-  /css             # Generated CSS (output from SCSS compilation)
-  /dist            # Final build output (HTML emails, CSS files, images)
+  /fonts           # Webfonts
+/dist              # Final build output (HTML emails, CSS files, images)
+/config.json       # Configuration for production URLs
 ```
 
 ## Gulp Tasks
 
 ### `gulp build:dev`
 
-This task is used for development. It watches for changes in SCSS and Handlebars files and automatically rebuilds them when changes are detected.
+This task is used for development. It watches for changes in SCSS and Handlebars files and automatically rebuilds them when changes are detected. Additionally, it runs a local development server to preview the emails in real time.
 
 ```bash
 gulp build:dev
 ```
+
+- **Local Server**: The `build:dev` task starts a BrowserSync server that serves the files from the `dist` folder. You can view the emails locally by navigating to `http://localhost:3000` in your browser. Changes to SCSS or Handlebars files will automatically trigger a rebuild and refresh the browser.
 
 ### `gulp build:prod`
 
@@ -70,25 +74,45 @@ This task is used to create a production-ready version of the emails. It perform
 6. Remove unused CSS.
 7. Minify the final HTML output.
 8. Copy images to the `dist` folder.
-9. Replace local image paths in the HTML and CSS files. Optionally, use an external URL if specified.
+9. Copy fonts to the `dist` folder.
+10. Replace local image and font paths in the HTML and CSS files. Optionally, use an external URL if specified.
 
-#### Using a Local Image Path (default)
+#### Using a Local Image and Font Path (default)
 
-If you want to keep the local image paths (`./images/`), simply run:
+If you want to keep the local image paths (`./images/`) and font paths (`./fonts/`), simply run:
 
 ```bash
 gulp build:prod
 ```
 
-#### Using an External Image Host
+#### Using an External Image and Font Host
 
-If you want to use an external image host (for production), you can provide the external URL using the `--prod-url` flag:
+If you want to use an external image or font host (for production), you can provide the external URL using the `--env=prod` flag. This will replace the local `../images/` and `../fonts/` paths with the specified external URLs in the root config.
 
 ```bash
-gulp build:prod --prod-url https://your-external-image-host.com/images/
+gulp build:prod --env=prod
 ```
 
-This will replace all instances of `../src/images/` with `https://your-external-image-host.com/images/` in both the HTML and CSS files in the `dist` folder.
+This will replace all instances of `../src/images/` and `../src/fonts/` with `https://your-external-host.com/images/` and `https://your-external-host.com/fonts/` respectively in both the HTML and CSS files in the `dist` folder.
+
+## Configuration
+
+### `config.json`
+
+The configuration for production paths (e.g., GitHub Pages URLs) is stored in the `config.json` file located in the root of the project.
+
+#### Example `config.json`
+
+```json
+{
+  "prod": {
+    "fontUrl": "https://your-username.github.io/your-repo-name/fonts/",
+    "imageUrl": "https://your-username.github.io/your-repo-name/images/"
+  }
+}
+```
+
+- In production mode, the Gulp tasks will automatically read the production URLs from this configuration file and replace the local paths during the build process.
 
 ## How It Works
 
@@ -97,10 +121,12 @@ This will replace all instances of `../src/images/` with `https://your-external-
 3. **CSS Inlining**: After building the HTML, the main CSS file is inlined into the HTML to ensure compatibility with email clients that strip external CSS.
 4. **CSS Pruning**: The unused CSS is removed to reduce the size of the email.
 5. **HTML Minification**: The final HTML is minified to reduce file size, making the emails faster to load.
-6. **Image Path Replacement**: The `replaceImagePaths` task allows you to either:
-   - Use local image paths (`./images/`) for development or testing.
-   - Replace image paths with an external URL when building for production, by specifying the `--prod-url` argument.
+6. **Asset Path Replacement**: The `replaceAssetPaths` task allows you to either:
+   - Use local paths (`../images/` and `../fonts/`) for development or testing.
+   - Replace these paths with an external URL when building for production by specifying the `--prod-url` argument or using the production URLs in `config.json`.
 
 ## Deployment
 
-After running the `gulp build:prod` command, the production-ready HTML files will be located in the `dist/` directory.
+After running the `gulp build:prod` command, the production-ready HTML files will be located in the `dist/` directory and are ready to be uploaded or sent.
+
+For deploying via GitHub Pages or another provider, you can configure the font and image URLs using the `config.json` file or the `--prod-url` option during the build process.
