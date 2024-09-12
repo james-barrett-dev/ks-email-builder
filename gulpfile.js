@@ -43,8 +43,10 @@ function groupMediaQueries() {
 // Build pages
 function buildPages() {
   return gulp.src('./src/emails/**/*.hbs')
-    .pipe(hb()
-      .partials('./src/partials/components/**/*.hbs')
+    .pipe(hb({
+      bustCache: true
+    })
+      .partials('./src/components/**/*.hbs')
     )
     .pipe(extname('.html'))
     .pipe(gulp.dest('./dist'));
@@ -137,20 +139,6 @@ function minifyHtml() {
     .pipe(gulp.dest('./dist'));
 }
 
-// Static server
-function serve() {
-  browserSync.init({
-    server: {
-      baseDir: './dist',
-    },
-    host: '0.0.0.0',
-    port: 3000,
-    open: false
-  });
-
-  gulp.watch('src/**/*').on('change', browserSync.reload);
-}
-
 gulp.task('copyImages', copyImages);
 gulp.task('compileSass', compileSass);
 gulp.task('groupMediaQueries', groupMediaQueries);
@@ -160,29 +148,46 @@ gulp.task('unescapeHtmlSpecialCharacters', unescapeHtmlSpecialCharacters);
 gulp.task('pruneUnusedCss', pruneUnusedCss);
 gulp.task('inlineCss', inlineCss);
 gulp.task('minifyHtml', minifyHtml);
-gulp.task('serve', serve);
 
-// Watch for changes in SCSS and Handlebars files
+// Static server + watch
 function watch() {
-  gulp.watch('./src/**/**/*.hbs', gulp.series(copyImages, compileSass, buildPages, replaceImagePaths));
+  browserSync.init({
+    server: {
+      baseDir: './dist',
+    },
+    port: 3000,
+    open: false,
+    notify: false,
+    reloadDelay: 500,
+    ghostMode: false
+  });
+
+  // Watch SCSS and rebuild CSS, then reload browser
+  gulp.watch('./src/scss/**/*.scss', gulp.series(compileSass, groupMediaQueries, function(done) {
+    browserSync.reload();
+    done();
+  }));
+
+  // Watch Handlebars files, rebuild HTML, then reload browser
+  gulp.watch('./src/**/*.hbs', gulp.series(copyImages, buildPages, replaceImagePaths, function(done) {
+    browserSync.reload();
+    done();
+  }));
 }
 
-// Run this task when creating an email or editing / creating components
-gulp.task('build:dev', gulp.parallel(watch, serve));
-
-// Run this task when publishing the emails for code review
-gulp.task('build:publish', gulp.series(
+// Initial build task (runs once)
+gulp.task('build:init', gulp.series(
   'copyImages',
   'compileSass',
   'groupMediaQueries',
   'buildPages',
-  'replaceImagePaths',
-  'unescapeHtmlSpecialCharacters',
-  'inlineCss',
-  'pruneUnusedCss',
+  'replaceImagePaths'
 ));
 
-// Run this task to package email for flight
+// Build tasks for development mode
+gulp.task('build:dev', gulp.series('build:init', watch));
+
+// Production build task
 gulp.task('build:prod', gulp.series(
   'copyImages',
   'compileSass',
