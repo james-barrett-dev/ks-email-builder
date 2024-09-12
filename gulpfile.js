@@ -1,3 +1,4 @@
+const fs = require('fs');
 const gulp = require('gulp');
 const yargs = require('yargs');
 const sass = require('gulp-dart-sass');
@@ -6,18 +7,25 @@ const hb = require('gulp-hb');
 const extname = require('gulp-extname');
 const cssInliner = require('gulp-inline-css');
 const replace = require('gulp-replace');
-const fs = require('fs');
 const mediaQueryGrouper = require('gulp-group-css-media-queries');
 const removeUnusedCss = require('gulp-email-remove-unused-css');
 const htmlMinify = require('gulp-htmlmin');
 const browserSync = require('browser-sync').create();
 
-// Get command-line arguments
-const argv = yargs.option('prod-url', {
-  alias: 'p',
+// Load configuration
+const config = JSON.parse(fs.readFileSync('./config.json'));
+
+// Determined whether production environment from the command-line argument
+const argv = yargs.option('env', {
+  alias: 'e',
   type: 'string',
-  description: 'Use this option to provide an external URL for image hosting in production'
+  description: 'Choose prod environment',
 }).argv;
+
+// Determine paths based on the environment
+const isProd = argv.env === 'prod';
+const fontUrl = isProd ? config.prod.fontUrl : '../fonts/';
+const imageUrl = isProd ? config.prod.imageUrl : '../images/';
 
 // Copy images folder from src to dist
 function copyImages() {
@@ -57,20 +65,11 @@ function buildPages() {
     .pipe(gulp.dest('./dist'));
 }
 
-// Replace the image paths in HTML and CSS files
-function replaceImagePaths() {
-  const imagePath = argv.prodUrl ? argv.prodUrl : './images/';
-  return gulp.src(['./dist/**/*.html', './dist/**/*.css'])
-    .pipe(replace(/..\/src\/images\//g, imagePath))  // Use external URL or local path
-    .pipe(gulp.dest('./dist'));
-}
-
-// Replace local font paths with the remote URL in production.
-// Font loading from a remote absolute path instead of relative has better results in many email clients
-function replaceFontPaths() {
-  const fontUrl = argv.prodUrl || './fonts/';  // Use the provided URL or fall back to local
-  return gulp.src('./dist/*.css')
-    .pipe(replace('../fonts/', fontUrl))  // Replace local paths with the provided URL
+// Replace local font and image paths with the user-provided production URL
+function replaceAssetPaths() {
+  return gulp.src(['./dist/*.css', './dist/*.html'])
+    .pipe(replace('../fonts/', fontUrl))
+    .pipe(replace('../src/images/', imageUrl))
     .pipe(gulp.dest('./dist'));
 }
 
@@ -157,8 +156,7 @@ gulp.task('copyFonts', copyFonts);
 gulp.task('compileSass', compileSass);
 gulp.task('groupMediaQueries', groupMediaQueries);
 gulp.task('buildPages', buildPages);
-gulp.task('replaceImagePaths', replaceImagePaths);
-gulp.task('replaceFontPaths', replaceFontPaths);
+gulp.task('replaceAssetPaths', replaceAssetPaths);
 gulp.task('unescapeHtmlSpecialCharacters', unescapeHtmlSpecialCharacters);
 gulp.task('pruneUnusedCss', pruneUnusedCss);
 gulp.task('inlineCss', inlineCss);
@@ -178,13 +176,13 @@ function watch() {
   });
 
   // Watch SCSS and rebuild CSS, then reload browser
-  gulp.watch('./src/scss/**/*.scss', gulp.series(compileSass, groupMediaQueries, function(done) {
+  gulp.watch('./src/scss/**/*.scss', gulp.series(compileSass, groupMediaQueries, replaceAssetPaths, function serve(done) {
     browserSync.reload();
     done();
   }));
 
   // Watch Handlebars files, rebuild HTML, then reload browser
-  gulp.watch('./src/**/*.hbs', gulp.series(copyImages, buildPages, replaceImagePaths, function(done) {
+  gulp.watch('./src/**/*.hbs', gulp.series(copyImages, buildPages, replaceAssetPaths, function serve(done) {
     browserSync.reload();
     done();
   }));
@@ -197,8 +195,7 @@ gulp.task('build:init', gulp.series(
   'compileSass',
   'groupMediaQueries',
   'buildPages',
-  'replaceImagePaths',
-  'replaceFontPaths'
+  'replaceAssetPaths'
 ));
 
 // Build tasks for development mode
@@ -207,13 +204,13 @@ gulp.task('build:dev', gulp.series('build:init', watch));
 // Production build task
 gulp.task('build:prod', gulp.series(
   'copyImages',
+  'copyFonts',
   'compileSass',
   'groupMediaQueries',
   'buildPages',
-  'replaceImagePaths',
-  'replaceFontPaths',
   'unescapeHtmlSpecialCharacters',
   'inlineCss',
   'pruneUnusedCss',
+  'replaceAssetPaths',
   'minifyHtml'
 ));
