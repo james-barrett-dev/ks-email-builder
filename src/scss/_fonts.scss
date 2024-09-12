@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'bariol';
+  src: url('../fonts/bariol-regular-webfont.eot');
+  src: url('../fonts/bariol-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/bariol-regular-webfont.woff') format('woff'),
+       url('../fonts/bariol-regular-webfont.ttf') format('truetype'),
+       url('../fonts/bariol-regular-webfont.svg#bariol_regularregular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'bariol';
+  src: url('../fonts/bariol-bold-webfont.eot');
+  src: url('../fonts/bariol-bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/bariol-bold-webfont.woff') format('woff'),
+       url('../fonts/bariol-bold-webfont.ttf') format('truetype'),
+       url('../fonts/bariol-bold-webfont.svg#bariolbold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}

@@ -25,6 +25,11 @@ function copyImages() {
     .pipe(gulp.dest('./dist/images'));
 }
 
+function copyFonts() {
+  return gulp.src('./src/fonts/**/*')
+    .pipe(gulp.dest('./dist/fonts'));
+}
+
 // Compile SCSS to CSS external stylesheet and prefix
 function compileSass() {
   return gulp.src('./src/scss/**/*.scss')
@@ -55,9 +60,17 @@ function buildPages() {
 // Replace the image paths in HTML and CSS files
 function replaceImagePaths() {
   const imagePath = argv.prodUrl ? argv.prodUrl : './images/';
-  
   return gulp.src(['./dist/**/*.html', './dist/**/*.css'])
     .pipe(replace(/..\/src\/images\//g, imagePath))  // Use external URL or local path
+    .pipe(gulp.dest('./dist'));
+}
+
+// Replace local font paths with the remote URL in production.
+// Font loading from a remote absolute path instead of relative has better results in many email clients
+function replaceFontPaths() {
+  const fontUrl = argv.prodUrl || './fonts/';  // Use the provided URL or fall back to local
+  return gulp.src('./dist/*.css')
+    .pipe(replace('../fonts/', fontUrl))  // Replace local paths with the provided URL
     .pipe(gulp.dest('./dist'));
 }
 
@@ -140,10 +153,12 @@ function minifyHtml() {
 }
 
 gulp.task('copyImages', copyImages);
+gulp.task('copyFonts', copyFonts);
 gulp.task('compileSass', compileSass);
 gulp.task('groupMediaQueries', groupMediaQueries);
 gulp.task('buildPages', buildPages);
 gulp.task('replaceImagePaths', replaceImagePaths);
+gulp.task('replaceFontPaths', replaceFontPaths);
 gulp.task('unescapeHtmlSpecialCharacters', unescapeHtmlSpecialCharacters);
 gulp.task('pruneUnusedCss', pruneUnusedCss);
 gulp.task('inlineCss', inlineCss);
@@ -178,10 +193,12 @@ function watch() {
 // Initial build task (runs once)
 gulp.task('build:init', gulp.series(
   'copyImages',
+  'copyFonts',
   'compileSass',
   'groupMediaQueries',
   'buildPages',
-  'replaceImagePaths'
+  'replaceImagePaths',
+  'replaceFontPaths'
 ));
 
 // Build tasks for development mode
@@ -194,6 +211,7 @@ gulp.task('build:prod', gulp.series(
   'groupMediaQueries',
   'buildPages',
   'replaceImagePaths',
+  'replaceFontPaths',
   'unescapeHtmlSpecialCharacters',
   'inlineCss',
   'pruneUnusedCss',
