@@ -1214,8 +1214,7 @@ a {
     padding-bottom: 8px !important;
   }
 
-  .kiddybank_pod_wrapper.fourth {
-    padding-top: 0 !important;
+  .kiddybank_pod_wrapper.fourth .kiddybank_pod {
     padding-right: 0 !important;
     padding-left: 0 !important;
   }
