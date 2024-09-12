@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "bariol";
+  src: url("https://james-barrett-dev.github.io/ks-email-builder/fonts/bariol-regular-webfont.eot");
+  src: url("https://james-barrett-dev.github.io/ks-email-builder/fonts/bariol-regular-webfont.eot?#iefix") format("embedded-opentype"), url("https://james-barrett-dev.github.io/ks-email-builder/fonts/bariol-regular-webfont.woff") format("woff"), url("https://james-barrett-dev.github.io/ks-email-builder/fonts/bariol-regular-webfont.ttf") format("truetype"), url("https://james-barrett-dev.github.io/ks-email-builder/fonts/bariol-regular-webfont.svg#bariol_regularregular") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "bariol";
+  src: url("https://james-barrett-dev.github.io/ks-email-builder/fonts/bariol-bold-webfont.eot");
+  src: url("https://james-barrett-dev.github.io/ks-email-builder/fonts/bariol-bold-webfont.eot?#iefix") format("embedded-opentype"), url("https://james-barrett-dev.github.io/ks-email-builder/fonts/bariol-bold-webfont.woff") format("woff"), url("https://james-barrett-dev.github.io/ks-email-builder/fonts/bariol-bold-webfont.ttf") format("truetype"), url("https://james-barrett-dev.github.io/ks-email-builder/fonts/bariol-bold-webfont.svg#bariolbold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+}
+
 .thread-item.expanded .thread-body .body,
 .msg-body {
   display: block !important;
@@ -388,13 +404,13 @@ strong {
 }
 
 .kiddybank_scalloped-edge.top {
-  background: url(./images/components/kiddybank/kiddybank_scalloped-edge_top_x1.png) center/cover;
-  background-image: url(./images/components/kiddybank/kiddybank_scalloped-edge_top_x1.png);
+  background: url(https://james-barrett-dev.github.io/ks-email-builder/images/components/kiddybank/kiddybank_scalloped-edge_top_x1.png) center/cover;
+  background-image: url(https://james-barrett-dev.github.io/ks-email-builder/images/components/kiddybank/kiddybank_scalloped-edge_top_x1.png);
 }
 
 .kiddybank_scalloped-edge.bottom {
-  background: url(./images/components/kiddybank/kiddybank_scalloped-edge_bottom_x1.png) center/cover;
-  background-image: url(./images/components/kiddybank/kiddybank_scalloped-edge_bottom_x1.png);
+  background: url(https://james-barrett-dev.github.io/ks-email-builder/images/components/kiddybank/kiddybank_scalloped-edge_bottom_x1.png) center/cover;
+  background-image: url(https://james-barrett-dev.github.io/ks-email-builder/images/components/kiddybank/kiddybank_scalloped-edge_bottom_x1.png);
 }
 
 .kiddybank_heading {
@@ -473,8 +489,8 @@ strong {
 }
 
 .rich-header_triangular-cut.danube {
-  background: url(./images/components/rich-header/triangular-cut_danube_x1.png) center/cover;
-  background-image: url(./images/components/rich-header/triangular-cut_danube_x1.png);
+  background: url(https://james-barrett-dev.github.io/ks-email-builder/images/components/rich-header/triangular-cut_danube_x1.png) center/cover;
+  background-image: url(https://james-barrett-dev.github.io/ks-email-builder/images/components/rich-header/triangular-cut_danube_x1.png);
 }
 
 a {
@@ -1049,18 +1065,18 @@ a {
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 2000px), only screen and (min-device-pixel-ratio: 2) and (max-width: 2000px), only screen and (min-resolution: 192dpi) and (max-width: 2000px), only screen and (min-resolution: 2dppx) and (max-width: 2000px) {
   .kiddybank_scalloped-edge.top {
-    background: url(./images/components/kiddybank/kiddybank_scalloped-edge_top_x2.png) center/cover !important;
-    background-image: url(./images/components/kiddybank/kiddybank_scalloped-edge_top_x2.png) !important;
+    background: url(https://james-barrett-dev.github.io/ks-email-builder/images/components/kiddybank/kiddybank_scalloped-edge_top_x2.png) center/cover !important;
+    background-image: url(https://james-barrett-dev.github.io/ks-email-builder/images/components/kiddybank/kiddybank_scalloped-edge_top_x2.png) !important;
   }
 
   .kiddybank_scalloped-edge.bottom {
-    background: url(./images/components/kiddybank/kiddybank_scalloped-edge_bottom_x2.png) center/cover !important;
-    background-image: url(./images/components/kiddybank/kiddybank_scalloped-edge_bottom_x2.png) !important;
+    background: url(https://james-barrett-dev.github.io/ks-email-builder/images/components/kiddybank/kiddybank_scalloped-edge_bottom_x2.png) center/cover !important;
+    background-image: url(https://james-barrett-dev.github.io/ks-email-builder/images/components/kiddybank/kiddybank_scalloped-edge_bottom_x2.png) !important;
   }
 
   .rich-header_triangular-cut.danube {
-    background: url(./images/components/rich-header/triangular-cut_danube_x2.png) center/cover !important;
-    background-image: url(./images/components/rich-header/triangular-cut_danube_x2.png) !important;
+    background: url(https://james-barrett-dev.github.io/ks-email-builder/images/components/rich-header/triangular-cut_danube_x2.png) center/cover !important;
+    background-image: url(https://james-barrett-dev.github.io/ks-email-builder/images/components/rich-header/triangular-cut_danube_x2.png) !important;
   }
 }
 
