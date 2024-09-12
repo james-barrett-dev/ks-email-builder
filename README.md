@@ -123,10 +123,10 @@ The configuration for production paths (e.g., GitHub Pages URLs) is stored in th
 5. **HTML Minification**: The final HTML is minified to reduce file size, making the emails faster to load.
 6. **Asset Path Replacement**: The `replaceAssetPaths` task allows you to either:
    - Use local paths (`../images/` and `../fonts/`) for development or testing.
-   - Replace these paths with an external URL when building for production by specifying the `--prod-url` argument or using the production URLs in `config.json`.
+   - Replace these paths with an external URL when building for production by specifying the `--env=prod` argument or using the production URLs in `config.json`.
 
 ## Deployment
 
 After running the `gulp build:prod` command, the production-ready HTML files will be located in the `dist/` directory and are ready to be uploaded or sent.
 
-For deploying via GitHub Pages or another provider, you can configure the font and image URLs using the `config.json` file or the `--prod-url` option during the build process.
+For deploying via GitHub Pages or another provider, you can configure the font and image URLs using the `config.json` file and the `--env=prod` option during the build process.
