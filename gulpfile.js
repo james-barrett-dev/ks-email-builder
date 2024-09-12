@@ -10,6 +10,7 @@ const fs = require('fs');
 const mediaQueryGrouper = require('gulp-group-css-media-queries');
 const removeUnusedCss = require('gulp-email-remove-unused-css');
 const htmlMinify = require('gulp-htmlmin');
+const browserSync = require('browser-sync').create();
 
 // Get command-line arguments
 const argv = yargs.option('prod-url', {
@@ -136,6 +137,20 @@ function minifyHtml() {
     .pipe(gulp.dest('./dist'));
 }
 
+// Static server
+function serve() {
+  browserSync.init({
+    server: {
+      baseDir: './dist',
+    },
+    host: '0.0.0.0',
+    port: 3000,
+    open: false
+  });
+
+  gulp.watch('src/**/*').on('change', browserSync.reload);
+}
+
 gulp.task('copyImages', copyImages);
 gulp.task('compileSass', compileSass);
 gulp.task('groupMediaQueries', groupMediaQueries);
@@ -145,6 +160,7 @@ gulp.task('unescapeHtmlSpecialCharacters', unescapeHtmlSpecialCharacters);
 gulp.task('pruneUnusedCss', pruneUnusedCss);
 gulp.task('inlineCss', inlineCss);
 gulp.task('minifyHtml', minifyHtml);
+gulp.task('serve', serve);
 
 // Watch for changes in SCSS and Handlebars files
 function watch() {
@@ -152,7 +168,7 @@ function watch() {
 }
 
 // Run this task when creating an email or editing / creating components
-gulp.task('build:dev', watch);
+gulp.task('build:dev', gulp.parallel(watch, serve));
 
 // Run this task when publishing the emails for code review
 gulp.task('build:publish', gulp.series(

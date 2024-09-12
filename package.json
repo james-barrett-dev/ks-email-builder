@@ -4,6 +4,7 @@
     "build": "gulp build:prod"
   },
   "dependencies": {
+    "browser-sync": "^3.0.2",
     "gulp": "4.0.0",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-dart-sass": "^1.1.0",
